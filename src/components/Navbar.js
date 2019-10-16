@@ -3,17 +3,21 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function Navbar() {
   return (
-    <View style={styles.container}>
-      <Text>ATM Consultoria</Text>
+    <View style={styles.title}>
+      <Text style={styles.textTitle}>ATM Consultoria</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  title: {
+    backgroundColor: '#ccc',
+    paddingTop: 30,
+    height: 80,
   },
+  textTitle: {
+    flex: 1,
+    fontSize: 18,
+    textAlign: 'center',
+  },  
 });
