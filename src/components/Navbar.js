@@ -1,23 +1,47 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import {
+  Text,
+	View,
+	Image,
+	StyleSheet,
+	TouchableHighlight
+} from 'react-native';
 
-export default function Navbar() {
-  return (
-    <View style={styles.title}>
-      <Text style={styles.textTitle}>ATM Consultoria</Text>
-    </View>
-  );
+const btnBack = require('../img/btn_voltar.png');
+
+export default class Navbar extends Component {
+  render() {
+		if(this.props.back){
+			return (
+				<View style={styles.titleBar}>
+					<TouchableHighlight onPress={ () => {this.props.navigator.pop();}} >
+						<Image source={btnBack} />
+					</TouchableHighlight>
+					<Text style={styles.title}>ATM Consultoria</Text>
+				</View>
+			);
+		}else{
+			return (
+				<View style={styles.titleBar}>
+					<Text style={styles.title}>ATM Consultoria</Text>
+				</View>
+			);
+		}
+  }
 }
 
 const styles = StyleSheet.create({
-  title: {
-    backgroundColor: '#ccc',
-    paddingTop: 30,
-    height: 80,
-  },
-  textTitle: {
-    flex: 1,
-    fontSize: 18,
-    textAlign: 'center',
-  },  
+	titleBar: {
+		backgroundColor: '#CCC',
+		padding: 25,
+		height: 80,
+		flexDirection: 'row',
+	},
+	title: {
+		flex: 1,
+		fontSize: 18,
+		fontWeight: 'bold',
+		textAlign: 'center',
+		color: '#000'
+	}
 });
