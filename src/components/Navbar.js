@@ -13,8 +13,11 @@ export default class Navbar extends Component {
   render() {
 		if(this.props.back){
 			return (
-				<View style={styles.titleBar}>
-					<TouchableHighlight onPress={ () => {this.props.navigator.pop();}} >
+				<View style={[styles.titleBar, {backgroundColor: this.props.colorBG}]}>
+					<TouchableHighlight 
+					underlayColor={this.props.colorBG}
+					activeOpacity={0.5}
+					onPress={ () => {this.props.navigator.pop();}} >
 						<Image source={btnBack} />
 					</TouchableHighlight>
 					<Text style={styles.title}>ATM Consultoria</Text>

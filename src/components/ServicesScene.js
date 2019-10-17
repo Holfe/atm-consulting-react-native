@@ -15,13 +15,13 @@ const services = require('../img/detalhe_servico.png');
 export default class ServicesScene extends Component {
   render() {
     return (
-			<View>
+			<View style={styles.container}>
         <StatusBar 
           //hidden
           backgroundColor='#19c1d8'
         />
 
-        <Navbar back navigator={this.props.navigator} />
+        <Navbar back navigator={this.props.navigator} colorBG={'#19c1d8'} />
 
         <View style={styles.header}>
           <Image source={services} />
@@ -29,9 +29,9 @@ export default class ServicesScene extends Component {
         </View>
 
         <View style={styles.serviceDetails}>
-          <Text style={styles.textServices}>- Consultoria</Text>
-          <Text style={styles.textServices}>- Processos</Text>
-          <Text style={styles.textServices}>- Análise de Projetos</Text>
+          <Text style={styles.textServices}>* Consultoria</Text>
+          <Text style={styles.textServices}>* Processos</Text>
+          <Text style={styles.textServices}>* Análise de Projetos</Text>
         </View>        
 
       </View>
@@ -40,6 +40,10 @@ export default class ServicesScene extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#fff',
+    flex: 1,
+  },
   header: {
     flexDirection: 'row',
     marginTop: 20

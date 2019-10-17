@@ -17,13 +17,13 @@ const cliente2 = require('../img/cliente2.png');
 export default class ClientScene extends Component {
   render() {
     return (
-			<View>
+			<View style={styles.container}>
         <StatusBar 
           //hidden
-          backgroundColor='#B9C941'
+          backgroundColor='#b9c941'
         />
 
-        <Navbar back navigator={this.props.navigator} />
+        <Navbar back navigator={this.props.navigator} colorBG={'#b9c941'} />
 
         <View style={styles.header}>
           <Image source={clients} />
@@ -47,13 +47,17 @@ export default class ClientScene extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#fff',
+    flex: 1,
+  },
   header: {
     flexDirection: 'row',
     marginTop: 20
   },
   textTitle: {
     fontSize: 30,
-    color: '#B9C941',
+    color: '#b9c941',
     marginLeft: 10,
     marginTop: 25
   },

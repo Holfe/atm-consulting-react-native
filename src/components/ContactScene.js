@@ -15,13 +15,13 @@ const contactDetails = require('../img/detalhe_contato.png');
 export default class contactDetailsScene extends Component {
   render() {
     return (
-			<View>
+			<View style={styles.container}>
         <StatusBar 
           //hidden
           backgroundColor='#61bd8c'
         />
 
-        <Navbar back navigator={this.props.navigator} />
+        <Navbar back navigator={this.props.navigator} colorBG={'#61bd8c'} />
 
         <View style={styles.header}>
           <Image source={contactDetails} />
@@ -40,6 +40,10 @@ export default class contactDetailsScene extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#fff',
+    flex: 1,
+  },
   header: {
     flexDirection: 'row',
     marginTop: 20

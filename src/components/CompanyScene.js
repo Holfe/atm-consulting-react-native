@@ -15,13 +15,13 @@ const company = require('../img/detalhe_empresa.png');
 export default class companyScene extends Component {
   render() {
     return (
-			<View>
+			<View style={styles.container}>
         <StatusBar 
           //hidden
           backgroundColor='#ec7148'
         />
 
-        <Navbar back navigator={this.props.navigator} />
+        <Navbar back navigator={this.props.navigator} colorBG={'#ec7148'} />
 
         <View style={styles.header}>
           <Image source={company} />
@@ -45,6 +45,10 @@ export default class companyScene extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#fff',
+    flex: 1,
+  },
   header: {
     flexDirection: 'row',
     marginTop: 20
