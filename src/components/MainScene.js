@@ -34,7 +34,6 @@ export default class MainScene extends Component {
         <View style={styles.menu}>
 
           <View style={styles.menuGrupo}>
-
             <TouchableHighlight
               onPress={() => {
                 this.props.navigator.push({ id: 'Client' });
@@ -52,8 +51,20 @@ export default class MainScene extends Component {
           </View>
 
           <View style={styles.menuGrupo}>
-            <Image style={styles.imgMenu} source={menuEmpresa} />
-            <Image style={styles.imgMenu} source={menuServico} />
+            <TouchableHighlight
+              onPress={() => {
+                this.props.navigator.push({ id: 'Company' });
+              }}
+            >
+              <Image style={styles.imgMenu} source={menuEmpresa} />
+            </TouchableHighlight>
+            <TouchableHighlight
+              onPress={() => {
+                this.props.navigator.push({ id: 'Services' });
+              }}
+            >
+              <Image style={styles.imgMenu} source={menuServico} />
+            </TouchableHighlight>
           </View>
         </View>
 

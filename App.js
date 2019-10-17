@@ -5,6 +5,8 @@ import {Navigator} from 'react-native-deprecated-custom-components';
 import MainScene from './src/components/MainScene';
 import ClientScene from './src/components/ClientScene';
 import ContactScene from './src/components/ContactScene';
+import ServicesScene from './src/components/ServicesScene';
+import CompanyScene from './src/components/CompanyScene';
 
 export default class App extends Component {
   render() {
@@ -24,6 +26,14 @@ export default class App extends Component {
 					if (route.id === 'Contact') {
 						//exibir a cenaClientes
 						return (<ContactScene navigator={navigator} />);
+					}
+					if (route.id === 'Services') {
+						//exibir a cenaClientes
+						return (<ServicesScene navigator={navigator} />);
+					}
+					if (route.id === 'Company') {
+						//exibir a cenaClientes
+						return (<CompanyScene navigator={navigator} />);
 					}
 				}}
       />

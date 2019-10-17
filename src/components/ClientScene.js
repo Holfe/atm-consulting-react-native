@@ -20,7 +20,7 @@ export default class ClientScene extends Component {
 			<View>
         <StatusBar 
           //hidden
-          backgroundColor='#CCC'
+          backgroundColor='#B9C941'
         />
 
         <Navbar back navigator={this.props.navigator} />

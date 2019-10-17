@@ -32,7 +32,7 @@ export default class Navbar extends Component {
 
 const styles = StyleSheet.create({
 	titleBar: {
-		backgroundColor: '#CCC',
+		backgroundColor: '#ccc',
 		padding: 25,
 		height: 80,
 		flexDirection: 'row',

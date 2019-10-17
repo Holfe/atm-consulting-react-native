@@ -10,28 +10,28 @@ import {
 //importar o componente barra navegação
 import Navbar from './Navbar';
 
-const contactDetails = require('../img/detalhe_contato.png');
+const services = require('../img/detalhe_servico.png');
 
-export default class contactDetailsScene extends Component {
+export default class ServicesScene extends Component {
   render() {
     return (
 			<View>
         <StatusBar 
           //hidden
-          backgroundColor='#61bd8c'
+          backgroundColor='#19c1d8'
         />
 
         <Navbar back navigator={this.props.navigator} />
 
         <View style={styles.header}>
-          <Image source={contactDetails} />
-          <Text style={styles.textTitle}>Contatos</Text>
+          <Image source={services} />
+          <Text style={styles.textTitle}>Nossos Serviços</Text>
         </View>
 
-        <View style={styles.contactDetails}>
-          <Text style={styles.textContact}>TEL: (34) 1234-1234</Text>
-          <Text style={styles.textContact}>CEL: (34) 91234-1234</Text>
-          <Text style={styles.textContact}>EMAIL: contato@atmconsultoria.com</Text>
+        <View style={styles.serviceDetails}>
+          <Text style={styles.textServices}>- Consultoria</Text>
+          <Text style={styles.textServices}>- Processos</Text>
+          <Text style={styles.textServices}>- Análise de Projetos</Text>
         </View>        
 
       </View>
@@ -46,15 +46,15 @@ const styles = StyleSheet.create({
   },
   textTitle: {
     fontSize: 30,
-    color: '#61bd8c',
+    color: '#19c1d8',
     marginLeft: 10,
     marginTop: 25,
   },
-  contactDetails: {
+  serviceDetails: {
     padding: 20,
     marginTop: 10,
   },
-  textContact: {
+  textServices: {
     fontSize: 18,
     fontWeight: 'bold',
   },
